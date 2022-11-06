@@ -19,3 +19,9 @@ jobs:
     - name: Lint with pylint
       run: |
         make lint
+
+    - name: Test env vars for python
+      run: python -c 'import os;print(os.environ)'
+      env:
+        AWS_ACCESS_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+        AWS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
