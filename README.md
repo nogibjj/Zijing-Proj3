@@ -22,7 +22,7 @@ Insert items into table
 ### Database Query 
 - Query 1: Get first 5 items
 - Query 2: Find jobs that pay more than $4000,000
-- Query 3: Find data scientist job in US
+- Query 3: Find data scientist job in DE
 - Query 4: Find job in small company
 - Query 5: Find job salary between $100,000 and $200,000
 

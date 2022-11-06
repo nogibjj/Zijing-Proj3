@@ -63,9 +63,9 @@ def load_data():
             )
 
 
-# create_json_file()
-# create_table()
-# load_data()
+create_json_file()
+create_table()
+load_data()
 
 # Step 4: Query data
 session = boto3.session.Session()
@@ -78,6 +78,7 @@ def query_first_five():
     )
     # convert response to dataframe
     df = pd.DataFrame(response['Items'])
+    print("Query 1: Get first 5 items")
     print(df)
 ## Query 2: Find jobs that pay more than $4000,000
 def query_salary():
@@ -86,24 +87,32 @@ def query_salary():
     )
     # convert response to dataframe
     df = pd.DataFrame(response['Items'])
+    print("Query 2: Find jobs that pay more than $4000,000")
     print(df)
 
-## Query 3: Find data scientist job in US
-def query_data_scientist_US():
+## Query 3: Find data scientist job in DE
+def query_data_scientist_DE():
+    title = "Data Scientist"
+    location = "DE"
     response = client.execute_statement(
-        Statement='SELECT title, salary FROM salaries where title = "Data Scientist" and location = "US"',
+        Statement= 'SELECT * FROM salaries WHERE title = ? AND location = ?',
+        Parameters= [{"S": title}, {"S": location}]
     )
     # convert response to dataframe
     df = pd.DataFrame(response['Items'])
+    print("Query 3: Find data scientist job in DE")
     print(df)
 
 ## Query 4: Find job in small company
 def query_small_company():
+    size = "S"
     response = client.execute_statement(
-        Statement='SELECT title, salary FROM salaries where company_size = "S" and salary > 1000000',
+        Statement='SELECT title, salary FROM salaries where company_size = ?',
+        Parameters= [{"S": size}]
     )
     # convert response to dataframe
     df = pd.DataFrame(response['Items'])
+    print("Query 4: Find job in small company")
     print(df)
 
 ## Query 5: Find job salary between $100,000 and $200,000
@@ -113,10 +122,11 @@ def query_salary_range():
     )
     # convert response to dataframe
     df = pd.DataFrame(response['Items'])
+    print("Query 5: Find job salary between $100,000 and $200,000")
     print(df)
 
 query_first_five()
 query_salary()
-query_data_scientist_US()
+query_data_scientist_DE()
 query_small_company()
 query_salary_range()
