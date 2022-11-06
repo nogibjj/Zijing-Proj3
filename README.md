@@ -4,7 +4,7 @@
 
 This is Zijing's project 3 repo, which contains a sql script with 5 queries built and connect to AWS Dynamodb database. Pandas library is also used in order to transform csv file in to the table in the database.
 
-Demo link: https://github.com/nogibjj/Zijing-codespcase/blob/main/video3571322614.mp4
+Demo link: https://github.com/nogibjj/Zijing-Proj3/blob/main/video2007832273.mp4
 
 Dataset: https://www.kaggle.com/code/raghurayirath/plotly-data-science-job-salary-dataset-eda/data
 
