@@ -2,7 +2,7 @@
 
 ![example workflow](https://github.com/nogibjj/Zijing-codespcase/actions/workflows/main.yml/badge.svg)
 
-This is Zijing's project 3 repo, which contains a sql script that 
+This is Zijing's project 3 repo, which contains a sql script with 5 queries built and connect to AWS Dynamodb database. Pandas library is also used in order to transform csv file in to the table in the database.
 
 Demo link: https://github.com/nogibjj/Zijing-codespcase/blob/main/video3571322614.mp4
 
