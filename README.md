@@ -9,7 +9,7 @@ Demo link: https://github.com/nogibjj/Zijing-codespcase/blob/main/video357132261
 Dataset: https://www.kaggle.com/code/raghurayirath/plotly-data-science-job-salary-dataset-eda/data
 
 ## Project Structure
-![image](https://github.com/nogibjj/Zijing-Proj3/edit/main/Structure.jpg)
+![image](https://github.com/nogibjj/Zijing-Proj3/blob/main/Structure.jpg)
 
 
 ## Main Feature
